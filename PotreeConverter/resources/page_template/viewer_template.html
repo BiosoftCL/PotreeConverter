@@ -30,9 +30,8 @@
 	<script src="libs/jstree/jstree.js"></script>
 	<script src="libs/potree/potree.js"></script>
 	<script src="libs/plasio/js/laslaz.js"></script>
-	
+
 	<!-- INCLUDE ADDITIONAL DEPENDENCIES HERE -->
-	<!-- INCLUDE SETTINGS HERE -->
 	
 	<div class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
 		<div id="potree_render_area"></div>
@@ -48,12 +47,20 @@
 		viewer.setPointBudget(1*1000*1000);
 		<!-- INCLUDE SETTINGS HERE -->
 		viewer.loadSettingsFromURL();
-		
+		viewer.useHQ = false;
+
 		viewer.loadGUI(() => {
-			viewer.setLanguage('en');
-			$("#menu_appearance").next().show();
+			viewer.setLanguage('es');
+			
+            $("#menu_appearance");
 			$("#menu_tools").next().show();
-			$("#menu_scene").next().show();
+			
+			$("#sidebar_header").hide();
+			$("#menu_scene").hide();
+			$("#menu_filters").hide();
+			$("#menu_about").hide();
+			$("#menu_classification").hide();
+
 			viewer.toggleSidebar();
 		});
 		
