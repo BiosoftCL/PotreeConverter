@@ -915,7 +915,7 @@ Potree.XHRFactory = {
 
 			let elFieldset = $(`
 				<fieldset style="border: none; margin: 0px; padding: 0px">
-					${elFieldsetLegendString}
+					<legend>${groupTitle}</legend>
 					<span style="display: flex">
 
 					</span>
